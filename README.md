@@ -26,4 +26,5 @@ Technical API documentation can be found through a web browser after running the
 Default port is `8080`. This can be explicitly set in the `config.js` file or by adding an environment variable `PORT`.
 
 ## Online Demo
-An online demo is hosted using Microsoft Azure at https://rws-demo-api.azurewebsites.net/api/help/
+An online demo is hosted using Microsoft Azure:  https://rws-demo-api.azurewebsites.net/api/help/
+A JsFiddle is available at https://jsfiddle.net/r4ng9dhL/
