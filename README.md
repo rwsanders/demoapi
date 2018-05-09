@@ -5,8 +5,7 @@ characters etc. The task is to determine if the string contains at least one of 
 found and false if not. Write it as a RESTful web service (no authentication necessary) in any language/framework you choose and 
 document the service. Please bring your laptop on the day of your interview to present your information.*
 ## Approach
-The challenge is to design and develop a RESTful web service that performs a safe and idempotent test against a supplied sting of 
-text.  Therefore an HTTP **GET** request is chosen to be the ideal method of transacting the the parameter to the service.  
+The challenge is to design and develop a RESTful web service that performs a safe and idempotent test against a supplied string.  Therefore an HTTP **GET** request is chosen to be the ideal method of transacting the the parameter to the service.  
 **Node.js** is chosen as the language due to the ease and applicability as a solution to the challenge and **Express** will be an 
 ideal web application framework due to it's simple, lightweight, and reliable architecture.
 ## Running the software
