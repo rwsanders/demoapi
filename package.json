@@ -1,0 +1,13 @@
+{
+  "name": "demo_api",
+  "version": "1.0.0",
+  "description": "Demo API - Returns true if contains all letters of english alphabet.",
+  "author": "Rob Sanders <rob.sanders@sansysllc.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}

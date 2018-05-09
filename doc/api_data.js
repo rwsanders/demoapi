@@ -1,0 +1,92 @@
+define({ "api": [
+  {
+    "type": "get",
+    "url": "/api/hasAlpha",
+    "title": "Test String for Alphabet",
+    "name": "HasAlpha",
+    "description": "<p>Determines if string contains at least one of each letter of the alphabet. Return true if all are found and false if not.</p>",
+    "group": "Api",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "text",
+            "description": "<p>Mandatory string input to submit for testing.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success - 200": [
+          {
+            "group": "Success - 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "True",
+            "description": "<p>if input contains all letters of alphabet.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\ntrue",
+          "type": "Boolean"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "4xx": [
+          {
+            "group": "4xx",
+            "type": "json",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>400 - Input text cannot be determined.</p>"
+          },
+          {
+            "group": "4xx",
+            "type": "json",
+            "optional": false,
+            "field": "NotFound",
+            "description": "<p>404 - Not Found!</p>"
+          }
+        ],
+        "5xx": [
+          {
+            "group": "5xx",
+            "type": "json",
+            "optional": false,
+            "field": "InternalServerError",
+            "description": "<p>500 - Oops! Something went wrong!</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "400-Error-Response:",
+          "content": "HTTP/1.1 400 Bad Request\n{\n  error: 'Input text cannot be determined.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "404-Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  error: 'Not Found!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "500-Error-Response:",
+          "content": "HTTP/1.1 500 Internal Server Error\n{\n  error: 'Oops! Something went wrong!'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./server-doc.js",
+    "groupTitle": "Api"
+  }
+] });
