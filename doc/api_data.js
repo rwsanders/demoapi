@@ -24,18 +24,18 @@ define({ "api": [
         "Success - 200": [
           {
             "group": "Success - 200",
-            "type": "Boolean",
+            "type": "json",
             "optional": false,
-            "field": "True",
-            "description": "<p>if input contains all letters of alphabet.</p>"
+            "field": "Object",
+            "description": "<p>The property &quot;result&quot; of a Json object will be true if input contains all letters of alphabet.</p>"
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\ntrue",
-          "type": "Boolean"
+          "content": "HTTP/1.1 200 OK\n{\n  result: true\n}",
+          "type": "json"
         }
       ]
     },

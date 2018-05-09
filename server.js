@@ -2,9 +2,8 @@
 const express = require('express');
 const config = require('./config');
 
-// Constants
+// Configs
 const PORT = config.app.port;
-const HOST = config.app.ipaddress;
 
 // App
 const app = express();
@@ -14,18 +13,21 @@ const alphaArray = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 //Api/HasAlpha End Point
 app.get('/api/hasAlpha', (req, res) => {
-  var uriText = req.query.text;
+  let uriText = req.query.text;
 
   if(!uriText){
     res.status(400).json({error: 'Input text cannot be determined.'});
     return;
   }
 
-  var result = alphaArray.every((letter) => {
+  let result = alphaArray.every((letter) => {
     return uriText.includes(letter) || uriText.includes(letter.toUpperCase());
   });
 
-  res.send(result + '\n');
+  let json = {};
+  json.result = result;
+
+  res.json(json);
 });
 
 //Api/Help End Point
@@ -33,15 +35,16 @@ app.use('/api/help', express.static(__dirname + '/doc'));
 
 //404 Not Found
 app.use(function (req, res, next) {
-  res.status(404).send("Not found!");
+  res.status(404).json({error: 'Not found!'});
 })
 
 //500 Server Error
 app.use(function (err, req, res, next) {
   console.error(err.stack);
-  res.status(500).send('Oops, something went wrong!');
+  res.status(500).json({error: 'Oops, something went wrong!'});
 })
 
 //Start App
-app.listen(PORT);
-console.log(`Running on http://${HOST}:${PORT}`);
+var server = app.listen(PORT, function(){
+  console.log('Running on port: %s', server.address().port);
+});

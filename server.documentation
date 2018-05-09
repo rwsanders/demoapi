@@ -4,10 +4,12 @@
  * @apiDescription Determines if string contains at least one of each letter of the alphabet. Return true if all are found and false if not.
  * @apiGroup Api
  * @apiParam {String} text Mandatory string input to submit for testing.
- * @apiSuccess (Success - 200) {Boolean} True if input contains all letters of alphabet.
- * @apiSuccessExample {Boolean} Success-Response:
+ * @apiSuccess (Success - 200) {json} Object The property "result" of a Json object will be true if input contains all letters of alphabet.
+ * @apiSuccessExample {json} Success-Response:
  *     HTTP/1.1 200 OK
- *     true
+ *     {
+ *       result: true
+ *     }
  * @apiError (4xx) {json} BadRequest 400 - Input text cannot be determined.
  * @apiError (4xx) {json} NotFound 404 - Not Found!
  * @apiError (5xx) {json} InternalServerError 500 - Oops! Something went wrong! 

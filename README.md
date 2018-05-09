@@ -23,4 +23,7 @@ Technical API documentation can be found through a web browser after running the
 
     http://<HOSTIPADDRESS:PORT>/api/help
 > For example: http://192.168.1.101:8080/api/help
-By default the application is made accessible to all IPv4 addresses hosted on the running machine using IPADDRESS `0.0.0.0` and PORT is `8080`. These can be modified directly in the `config.js` file or by adding environment variables `APP_IPADDRESS` and `APP_PORT`.
+Default port is `8080`. This can be explicitly set in the `config.js` file or by adding an environment variable `PORT`.
+
+## Online Demo
+An online demo is hosted using Microsoft Azure at https://rws-demo-api.azurewebsites.net/api/help/
