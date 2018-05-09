@@ -86,7 +86,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "./server-doc.js",
+    "filename": "./server.documentation",
     "groupTitle": "Api"
   }
 ] });
