@@ -1,13 +1,14 @@
 # Demo API
 **Challenge Description** 
+
 *You will receive a string as input, potentially a mixture of upper and lower case, numbers, special 
 characters etc. The task is to determine if the string contains at least one of each letter of the alphabet. Return true if all are 
 found and false if not. Write it as a RESTful web service (no authentication necessary) in any language/framework you choose and 
 document the service. Please bring your laptop on the day of your interview to present your information.*
 ## Approach
 The challenge is to design and develop a RESTful web service that performs a safe and idempotent test against a supplied string.  Therefore an HTTP **GET** request is chosen to be the ideal method of transacting the the parameter to the service.  
-**Node.js** is chosen as the language due to the ease and applicability as a solution to the challenge and **Express** will be an 
-ideal web application framework due to it's simple, lightweight, and reliable architecture.
+**Node.js** is a fitting development language for this task. **Express** is an 
+ideal web application framework due to its simple, lightweight, and reliable architecture for routing web requests.
 ## Running the software
 The software can be run simply by cloning the repository then running the following console or shell commands from the application 
 root directory:
