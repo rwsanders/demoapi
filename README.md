@@ -11,6 +11,7 @@ ideal web application framework due to it's simple, lightweight, and reliable ar
 ## Running the software
 The software can be run simply by cloning the repository then running the following console or shell commands from the application 
 root directory:
+
     npm install
  This may require root permissions so try executing with `sudo` if an error occurs.
  
